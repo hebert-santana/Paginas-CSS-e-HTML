@@ -8,7 +8,7 @@ Projeto desenvolvido durante curso de <strong><em>Layouts Responsivos: trabalhan
 * HTML
 * CSS
 
-<https://hebert-santana.github.io/apeperia/>
+<https://apeperia-pink-omega.vercel.app/>
 
 ## Autor
 > Hebert Santana 
