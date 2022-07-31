@@ -1,0 +1,81 @@
+.populares {
+        padding: 3rem 0;
+}
+
+.populares__card {
+    background: #fdfdfd;
+    display: grid;  /* agora esse elemento pode receber templates, colunas e linhas */
+    grid-template-areas:    /* uma coluna e duas linhas, a primeira das linhas será card-imagem, a segunda card-corpo */
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;
+    /* grid-template-rows: 173px auto; determinando o tamanho das imagens */
+    /* width: calc(20% - 1rem); primeiro para dividir em linha em 5 partes (20%) e inserindo um margin-right de 1rem entre os cards */
+}
+
+.populares__card___imagem { /* fazendo a imagem ocupar 100% da linha e da coluna */
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%;
+}
+
+.populares__card___corpo {
+    display: grid;
+    grid-area: card-corpo;
+    grid-row-gap: .5rem;    /* espaçamento de um card para o outro */
+    grid-template-areas:    /* definindo que o card terá um cabeçalho e um conteúdo */
+        "card-cabecalho"
+        "card-conteudo";
+    grid-template-rows: 50px auto;
+    padding: .75rem;
+}
+
+.populares__conteudo { /*é o pai de todos cards pelo HTML */
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: conteudo; /* especifica que o card deve ficar dentro da área conteúdo */
+    padding: 1rem 0rem;
+}
+
+.populares__card___titulo {
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    color: #808080;
+    font-size: .9rem;
+}
+
+.populares__card___descricao { /*estilo para a descrição do aplicativo de cada card; justificando o texto, definindo margem, tamanho e cor */
+    color: #333333;
+    line-height: 1.5;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+/* os cards estavam com margin-right 1 rem, mas gerou problema de espaçamento diferente entre o primeiro card e a margem esquerda em comparação ao último card para a margem direita, para corrigir retiramos a margem do último filho */
+.populares__card:last-child { 
+    margin-right: 0;
+}
+
+/* todo TÍTULO DA SESSÃO */
+.populares__titulo {
+    font-weight: 500;
+}
+
+.populares__icone { /* espaçamento para o ícone */
+    margin-right: .25rem;
+}
+
+.populares__cabecalho { /* deixando os elementos no extremo da página */
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.populares__botao { /* removendo o aspecto de botão */
+    background: transparent;
+    border: none;
+    color: #333333;
+}
