@@ -17,7 +17,7 @@ Colocando em prática o aprendizado em Grids, com um projeto de uma página de j
 
 ## 🌐 Site
 
-<https://hebert-santana.github.io/alura-gridgamer/>
+<https://gridgamer.vercel.app/>
 
 ## Autor
 ~~~ javascript
